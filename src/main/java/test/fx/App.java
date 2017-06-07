@@ -28,6 +28,7 @@ public class App extends Application
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 	    this.primaryStage = primaryStage;
+	   
 	    this.primaryStage.setTitle("Loader manager");
 
 	    initRootLayout();
@@ -37,12 +38,13 @@ public class App extends Application
 	/**
      * Инициализирует корневой макет.
      */
-    public void initRootLayout() {
+    @SuppressWarnings("restriction")
+	public void initRootLayout() {
         try {
             // Загружаем корневой макет из fxml файла.
             FXMLLoader loader = new FXMLLoader();
             
-            loader.setLocation(App.class.getResource("view/RootLayout.fxml"));
+            loader.setLocation(getClass().getResource("/RootLayout.fxml"));
             
             rootLayout = (BorderPane) loader.load();
 
@@ -59,17 +61,20 @@ public class App extends Application
     }
     
     /**
-     * Показывает в корневом макете сведения об адресатах.
+     * Показывает в корневом макете таблицу заданий.
      */
     public void showPersonOverview() {
         try {
             // Загружаем сведения об адресатах.
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(App.class.getResource("view/PersonOverview.fxml"));
+            
+            loader.setLocation(getClass().getResource("/PersonOverview.fxml"));
+            
             AnchorPane personOverview = (AnchorPane) loader.load();
 
             // Помещаем сведения об адресатах в центр корневого макета.
             rootLayout.setCenter(personOverview);
+            
         } catch (IOException e) {
             e.printStackTrace();
         }
