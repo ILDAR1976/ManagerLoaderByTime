@@ -1,4 +1,4 @@
-package fx;
+package test.fx.model;
 
 import java.time.LocalDateTime;
 
@@ -18,8 +18,8 @@ public class LoaderModel {
 		this(null, null, null, null, null);
 	}
 	
-	public LoaderModel(LocalDateTime ldt, String source, String destination, String type, String status) {
-		this.time = new SimpleObjectProperty<LocalDateTime>(ldt);
+	public LoaderModel(LocalDateTime time, String source, String destination, String type, String status) {
+		this.time = new SimpleObjectProperty<LocalDateTime>(time);
 		this.source = new SimpleStringProperty(source);
 		this.destination = new SimpleStringProperty(destination);
 		this.type = new SimpleStringProperty(type);

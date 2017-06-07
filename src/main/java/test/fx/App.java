@@ -3,7 +3,6 @@ package test.fx;
 import java.io.IOException;
 import java.time.LocalDateTime;
 
-import fx.LoaderModel;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -14,6 +13,8 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import test.fx.model.LoaderModel;
+import test.fx.view.LoaderController;
 
 /**
  *  Main module
@@ -63,7 +64,7 @@ public class App extends Application
             // Загружаем корневой макет из fxml файла.
             FXMLLoader loader = new FXMLLoader();
             
-            loader.setLocation(getClass().getResource("/RootLayout.fxml"));
+            loader.setLocation(getClass().getResource("/test/fx/view/RootLayout.fxml"));
             
             rootLayout = (BorderPane) loader.load();
 
@@ -87,7 +88,7 @@ public class App extends Application
             // Загружаем сведения об адресатах.
             FXMLLoader loader = new FXMLLoader();
             
-            loader.setLocation(getClass().getResource("/LoaderList.fxml"));
+            loader.setLocation(getClass().getResource("/test/fx/view/LoaderList.fxml"));
             
             AnchorPane personOverview = (AnchorPane) loader.load();
 

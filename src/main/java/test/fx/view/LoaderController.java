@@ -1,12 +1,13 @@
-package test.fx;
+package test.fx.view;
 
 import java.time.LocalDateTime;
 
-import fx.LoaderModel;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import test.fx.App;
+import test.fx.model.LoaderModel;
 
 public class LoaderController {
 
