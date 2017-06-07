@@ -11,11 +11,11 @@
          <items>
             <TableView fx:id="loaderTable" prefHeight="200.0" prefWidth="200.0">
               <columns>
-                <TableColumn fx:id="timeColumn" prefWidth="141.0" text="Time" />
-                <TableColumn fx:id="sourceColumn" prefWidth="376.0" text="Source" />
-                  <TableColumn fx:id="destinationColumn" prefWidth="263.0" text="Destination" />
-                  <TableColumn fx:id="typeColumn" prefWidth="128.0" text="Type" />
-                  <TableColumn fx:id="statusColumn" prefWidth="90.0" text="Status" />
+                <TableColumn fx:id="timeColumn" maxWidth="1.7976931348623157E308" prefWidth="141.0" text="Time" />
+                <TableColumn fx:id="sourceColumn" maxWidth="1.7976931348623157E308" prefWidth="376.0" text="Source" />
+                  <TableColumn fx:id="destinationColumn" maxWidth="1.7976931348623157E308" prefWidth="263.0" text="Destination" />
+                  <TableColumn fx:id="typeColumn" maxWidth="1.7976931348623157E308" prefWidth="128.0" text="Type" />
+                  <TableColumn fx:id="statusColumn" maxWidth="1.7976931348623157E308" prefWidth="90.0" text="Status" />
               </columns>
             </TableView>
          </items></SplitPane>

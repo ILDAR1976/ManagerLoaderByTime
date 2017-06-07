@@ -1,6 +1,7 @@
 package test.fx.view;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -47,6 +48,24 @@ public class LoaderController {
         destinationColumn.setCellValueFactory(cellData -> cellData.getValue().destinationProperty());
         typeColumn.setCellValueFactory(cellData -> cellData.getValue().typeProperty());
         statusColumn.setCellValueFactory(cellData -> cellData.getValue().statusProperty());
+        
+        Double currentWidth = timeColumn.prefWidthProperty().get();
+        currentWidth += sourceColumn.prefWidthProperty().get();
+        currentWidth += destinationColumn.prefWidthProperty().get();
+        currentWidth += typeColumn.prefWidthProperty().get();
+        currentWidth += statusColumn.prefWidthProperty().get();
+
+        timeColumn.prefWidthProperty().bind(loaderTable.widthProperty().multiply(
+        		(timeColumn.widthProperty().get()/currentWidth)));
+        sourceColumn.prefWidthProperty().bind(loaderTable.widthProperty().multiply(
+        		(sourceColumn.widthProperty().get()/currentWidth)));
+        destinationColumn.prefWidthProperty().bind(loaderTable.widthProperty().multiply(
+        		(destinationColumn.widthProperty().get()/currentWidth)));
+        typeColumn.prefWidthProperty().bind(loaderTable.widthProperty().multiply(
+        		(typeColumn.widthProperty().get()/currentWidth)));
+        statusColumn.prefWidthProperty().bind(loaderTable.widthProperty().multiply(
+        		(statusColumn.widthProperty().get()/currentWidth)));
+       
     }
     
     /**
@@ -59,7 +78,7 @@ public class LoaderController {
 
         // Добавление в таблицу данных из наблюдаемого списка
         loaderTable.setItems(App.getLoaderModelData());
-        
-    }
-    
+     }
+
+ 
 }
