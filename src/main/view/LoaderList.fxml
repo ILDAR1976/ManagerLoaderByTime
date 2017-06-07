@@ -5,17 +5,17 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="test.fx.LoaderController">
    <children>
       <SplitPane prefHeight="300.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
          <items>
-            <TableView prefHeight="200.0" prefWidth="200.0">
+            <TableView fx:id="loaderTable" prefHeight="200.0" prefWidth="200.0">
               <columns>
-                <TableColumn prefWidth="128.0" text="Time" />
-                <TableColumn prefWidth="389.0" text="Source" />
-                  <TableColumn prefWidth="263.0" text="Destination" />
-                  <TableColumn prefWidth="128.0" text="Type" />
-                  <TableColumn prefWidth="90.0" text="Status" />
+                <TableColumn fx:id="timeColumn" prefWidth="141.0" text="Time" />
+                <TableColumn fx:id="sourceColumn" prefWidth="376.0" text="Source" />
+                  <TableColumn fx:id="destinationColumn" prefWidth="263.0" text="Destination" />
+                  <TableColumn fx:id="typeColumn" prefWidth="128.0" text="Type" />
+                  <TableColumn fx:id="statusColumn" prefWidth="90.0" text="Status" />
               </columns>
             </TableView>
          </items></SplitPane>
