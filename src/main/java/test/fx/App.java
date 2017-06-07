@@ -32,7 +32,7 @@ public class App extends Application
 	    this.primaryStage.setTitle("Loader manager");
 
 	    initRootLayout();
-	    showPersonOverview();
+	    showLoaderList();
 	}
 
 	/**
@@ -63,12 +63,12 @@ public class App extends Application
     /**
      * Показывает в корневом макете таблицу заданий.
      */
-    public void showPersonOverview() {
+    public void showLoaderList() {
         try {
             // Загружаем сведения об адресатах.
             FXMLLoader loader = new FXMLLoader();
             
-            loader.setLocation(getClass().getResource("/PersonOverview.fxml"));
+            loader.setLocation(getClass().getResource("/LoaderList.fxml"));
             
             AnchorPane personOverview = (AnchorPane) loader.load();
 
